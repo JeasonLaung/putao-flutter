@@ -1,6 +1,7 @@
 
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:template/config/application.dart';
 import 'package:weui/weui.dart';
 
@@ -28,7 +29,7 @@ class _IndexPageState extends State<IndexPage> {
   final double listPadding = 18.0;
   @override
   Widget build(BuildContext context) {
-
+    ScreenUtil.instance = ScreenUtil(width: 1080, height: 1920)..init(context);
     final theme = WeUi.getTheme(context);
     final List<WeCollapseItem> children = [];
 

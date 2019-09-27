@@ -25,6 +25,9 @@ dependencies:
   cupertino_icons: ^0.1.2
   weui: ^0.0.5
   fluro: ^1.5.1
+  flutter_screenutil: ^0.6.0
+  dio: ^2.2.2
+  provide: ^1.0.2
   # barcode_scan: ^1.0.0
 
 dev_dependencies:
