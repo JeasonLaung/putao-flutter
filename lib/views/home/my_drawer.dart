@@ -66,7 +66,7 @@ class MyDrawer extends StatelessWidget{
   ];
   @override
   Widget build(BuildContext context) {
-    ScreenUtil.instance = ScreenUtil(width: 1080, height: 1920)..init(context);
+    // ScreenUtil.instance = ScreenUtil(width: 1080, height: 1920)..init(context);
     
     return Drawer(
       child: Provide<UserProvider>(
@@ -79,7 +79,7 @@ class MyDrawer extends StatelessWidget{
                 children: <Widget>[
                   MyDrawerUserDrawerHeader(user: user,),
                   Container(
-                    color: Colors.white,
+                    // color: Colors.white,
                     height: ScreenUtil().setHeight(1920.0),
                     padding: EdgeInsets.only(
                       left:  ScreenUtil().setWidth(20.0),
@@ -114,13 +114,16 @@ class MyDrawerUserDrawerHeader extends StatelessWidget {
       decoration: BoxDecoration(
         gradient: LinearGradient(
           colors: [
-            Color(0xff7d86fc),
+            Color(0xff7df6fc),
             Color(0xff635ff2)
           ]
         ),
         borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(20.0)
+          bottomRight: Radius.elliptical(300.0, 100.0),
         ),
+        border: Border(
+
+        )
       ),
       currentAccountPicture: CircleAvatar(
         backgroundImage: NetworkImage(user.info['avatar']),
@@ -129,7 +132,11 @@ class MyDrawerUserDrawerHeader extends StatelessWidget {
         builder: (context) {
           return Row(
             children: <Widget>[
-              Text(user.info['name']),
+              Text(user.info['name'],
+                style: TextStyle(
+                  fontSize: ScreenUtil().setSp(55.0)
+                ),
+              ),
               SuiTag(
                 title: '高管',
               )
@@ -139,7 +146,11 @@ class MyDrawerUserDrawerHeader extends StatelessWidget {
       ),
       accountEmail: Builder(
         builder: (context) {
-          return Text(user.info['company_name']);
+          return Text(user.info['company_name'],
+            style: TextStyle(
+              fontSize: ScreenUtil().setSp(35.0)
+            ),
+          );
         },
       ),
     );
@@ -156,7 +167,16 @@ class MyDrawerIconNavigator extends StatelessWidget{
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Icon(item['icon']),
-          Text(item['title']),
+          Padding(
+            padding: EdgeInsets.only(
+              top: 3.0
+            ),
+            child: Text(item['title'],
+              style: TextStyle(
+                fontSize: ScreenUtil().setSp(35.0)
+              ),
+            ),
+          ),
         ],
       ),
       onTap: () {
@@ -169,7 +189,7 @@ class MyDrawerIconNavigator extends StatelessWidget{
   Widget build(BuildContext context) {
     return Container(
       // color: Colors.black12,
-      height: ScreenUtil().setHeight(175),
+      height: ScreenUtil().setHeight(200),
       child: GridView.count(
         crossAxisCount: 4,
         physics: NeverScrollableScrollPhysics(),

@@ -20,6 +20,7 @@ class _HomePageState extends State<HomePage> with AutomaticKeepAliveClientMixin 
   }
   @override
   Widget build(BuildContext context) {
+    ScreenUtil.instance = ScreenUtil(width: 1080, height: 1920)..init(context);
     super.build(context);
     
     return Scaffold(
