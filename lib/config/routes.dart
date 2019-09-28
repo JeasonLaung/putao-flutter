@@ -19,7 +19,7 @@ class Routes {
     );
 
     // 配置渲染路由
-    router.define(index, handler: IndexRouter);
-    router.define(setting, handler: SettingRouter);
+    router.define(index, handler: indexRouter);
+    router.define(setting, handler: settingRouter);
   }
 }

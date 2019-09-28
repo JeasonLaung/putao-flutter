@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provide/provide.dart';
 
 import '../../providers/counter.dart';
@@ -60,6 +61,13 @@ class _HomePageState extends State<HomePage> with AutomaticKeepAliveClientMixin 
               style: Theme.of(context).textTheme.display1,
             ),
           ),
+          Container(
+            height: ScreenUtil().setHeight(1920.0),
+            child: Stack(
+              children: <Widget>[
+              ],
+            ),
+          )
         ],
       ),
     );

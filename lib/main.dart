@@ -1,15 +1,16 @@
-import 'dart:async';
+
 
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
 import 'package:provide/provide.dart';
 import 'package:weui/weui.dart';
+// import 'package:weui/weui.dart';
 
 import './config/routes.dart';
 import './config/application.dart';
 import './providers/counter.dart';
 import './providers/user.dart';
-import './views/index.dart';
+// import './views/index.dart';
 import './views/home/home_page.dart';
 
 void main(){
@@ -50,11 +51,25 @@ class App extends StatelessWidget {
 
 
     // 设置主题
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      onGenerateRoute: Application.router.generator,
-      // home: IndexPage()
-      home: HomePage(),
+    return WeUi(
+      theme: WeTheme(
+        primaryColor: Color(0xff6F71F7),
+        primaryColorDisabled: Color(0xff5cadff),
+        warnColor: Color(0xfffb4343),
+        warnColorDisabled: Color(0xfffaa7a3)
+      ),
+      config: WeConfig(
+        toastSuccessDuration: 5000
+      ),
+      child: MaterialApp(
+        theme: ThemeData(
+          primaryColor: Colors.white
+        ),
+        debugShowCheckedModeBanner: false,
+        onGenerateRoute: Application.router.generator,
+        // home: IndexPage()
+        home: HomePage(),
+      ),
     );
   }
 }

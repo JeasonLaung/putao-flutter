@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:weui/weui.dart';
 
-import '../../components/form.dart';
+import '../../../components/form.dart';
 
 
 class SettingPage extends StatefulWidget {
@@ -15,18 +15,17 @@ class _SettingPageState extends State<SettingPage> {
   };
   @override 
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('设置'),
-      ),
-      body: ListView(
+    return SuiForm(
+      title: Text('设置'),
+      onSubmit: () {
+        print('我提交了');
+        print(WeButtonType.warn);
+      },
+      child: ListView(
         children: <Widget>[
           // WeInput(
           //   label: '账号',
           // ),
-          Container(
-            height: 10.0,
-          ),
           WeCell(
             label: '系统通知',
             content: WeSwitch(
@@ -40,23 +39,8 @@ class _SettingPageState extends State<SettingPage> {
           ),
           Divider(),
           WeCell(
-            label: '版本更新',
-            content: Icon(Icons.keyboard_arrow_right),
-            onClick: () {
-              print('点击了更新');
-            },
+            label: '',
           ),
-          Divider(),
-          Padding(
-            padding: EdgeInsets.only(
-              left: 40.0,
-              right: 40.0
-            ),
-            child: WeButton(
-              '退出登陆',
-              theme: WeButtonType.warn,
-            ),
-          )
         ],
       ),
     );

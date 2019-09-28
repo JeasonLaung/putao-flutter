@@ -7,13 +7,13 @@ import '../views/index.dart';
 
 // 负责放置处理内容
 
-var IndexRouter = Handler(
+var indexRouter = Handler(
   handlerFunc: (BuildContext context, Map<String, List<String>> params) {
     return IndexPage();
   } 
 );
 
-var SettingRouter = Handler(
+var settingRouter = Handler(
   handlerFunc: (BuildContext context, Map<String, List<String>> params) {
     return SettingPage();
   } 

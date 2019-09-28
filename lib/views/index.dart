@@ -30,7 +30,7 @@ class _IndexPageState extends State<IndexPage> {
   @override
   Widget build(BuildContext context) {
     ScreenUtil.instance = ScreenUtil(width: 1080, height: 1920)..init(context);
-    final theme = WeUi.getTheme(context);
+    // final theme = WeUi.getTheme(context);
     final List<WeCollapseItem> children = [];
 
     list.forEach((item) {
