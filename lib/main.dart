@@ -44,6 +44,8 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+
     // 配置路由
     final Router router = Router();
     Routes.config(router);

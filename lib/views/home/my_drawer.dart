@@ -242,6 +242,10 @@ class MyDrawerFixButton extends StatelessWidget {
       right: 0,
       height: ScreenUtil().setHeight(150.0),
       child: Container(
+        padding: EdgeInsets.only(
+          left: 10.0,
+          right: 10.0
+        ),
         decoration: BoxDecoration(
           border: Border(
             top: BorderSide(
@@ -276,7 +280,7 @@ class MyDrawerFixButton extends StatelessWidget {
                 Application.router.navigateTo(context, '/setting');
               },
               child: Container(
-                width: ScreenUtil().setWidth(220.0),
+                width: ScreenUtil().setWidth(250.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
@@ -292,7 +296,7 @@ class MyDrawerFixButton extends StatelessWidget {
             InkWell(
               onTap: (){},
               child: Container(
-                width: ScreenUtil().setWidth(220.0),
+                width: ScreenUtil().setWidth(250.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
