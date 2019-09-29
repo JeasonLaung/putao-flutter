@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:template/config/application.dart';
 
 class PlacePage extends StatefulWidget {
   @override
@@ -11,7 +12,9 @@ class _PlacePageState extends State<PlacePage> {
     return Scaffold(
       body: Stack(
         children: <Widget>[
-          Container()
+          Container(
+            height: Application.screenHeight,
+          )
         ],
       ),
     );
