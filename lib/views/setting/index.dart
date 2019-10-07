@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:weui/weui.dart';
 
-import '../../components/form.dart';
 
 
 class SettingPage extends StatefulWidget {

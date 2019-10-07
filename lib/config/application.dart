@@ -18,6 +18,9 @@ class Application {
 
   
   static void init(BuildContext context) {
+    if (statusHeight != null) {
+      return ;
+    }
     statusHeight = MediaQueryData.fromWindow(WidgetsBinding.instance.window).padding.top;
     screenWidth = MediaQuery.of(context).size.width;
     screenHeight = MediaQuery.of(context).size.height;

@@ -98,12 +98,12 @@ class HomePageToolButton extends StatelessWidget {
     {
       'title': '个人用车',
       'icon': Icons.drag_handle,
-      'url': '/'
+      'url': '/place'
     },
     {
       'title': '权限说明',
       'icon': Icons.dock,
-      'url': '/'
+      'url': '/permission'
     },
   ];
   Widget _createToolButton (BuildContext context,item) {
